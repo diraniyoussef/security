@@ -40,7 +40,7 @@ public class Emergency extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emergancy);
+        setContentView(R.layout.activity_emergency);
         r = Volley.newRequestQueue(this);
         username = findViewById(R.id.username);
         phone = findViewById(R.id.userphone);
