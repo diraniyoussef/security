@@ -48,8 +48,8 @@ public class Emergency extends AppCompatActivity {
         fn = getIntent().getExtras().getString("name");
         pn = getIntent().getExtras().getString("phone");
         cases = findViewById(R.id.sos);
-        String url = "https://localhost/security_db/case.php";
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, null, new Response.Listener<JSONObject>() {
+        String Url_case = "https://localhost/security_db/case.php";
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, Url_case, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 JSONArray jsonArray = null;
