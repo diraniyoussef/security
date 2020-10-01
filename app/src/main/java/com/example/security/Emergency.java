@@ -24,14 +24,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class Emergency extends AppCompatActivity {
-    static String URL_register = "https://localhost/security_db/notificationpath.php";
+    static String URL_register = "https://localhost/securityserver/notificationpath.php";
 
     TextView username;
     TextView phone;
-    Button emergency;
+    Button emergencyButton;
     String fn;
     String pn;
-    Spinner cases;
+    Spinner casesSpinner;
     ArrayList<String> caseList = new ArrayList<>();
     ArrayAdapter<String> caseListAdapter;
     RequestQueue r;
@@ -44,11 +44,11 @@ public class Emergency extends AppCompatActivity {
         r = Volley.newRequestQueue(this);
         username = findViewById(R.id.username);
         phone = findViewById(R.id.userphone);
-        emergency = findViewById(R.id.emergancy);
+        emergencyButton = findViewById(R.id.emergency_button);
         fn = getIntent().getExtras().getString("name");
         pn = getIntent().getExtras().getString("phone");
-        cases = findViewById(R.id.sos);
-        String Url_case = "https://localhost/security_db/case.php";
+        casesSpinner = findViewById(R.id.sos_case_spinner);
+        String Url_case = "https://localhost/securityserver/case.php";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, Url_case, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -61,7 +61,7 @@ public class Emergency extends AppCompatActivity {
                         caseList.add(casename);
                         caseListAdapter = new ArrayAdapter<>(Emergency.this, android.R.layout.simple_spinner_dropdown_item);
                         caseListAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                        cases.setAdapter(caseListAdapter);
+                        casesSpinner.setAdapter(caseListAdapter);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -75,15 +75,15 @@ public class Emergency extends AppCompatActivity {
 
         });
         r.add(jsonObjectRequest);
-        emergency.setOnClickListener(new View.OnClickListener() {
+        emergencyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                emegency();
+                emergency();
             }
         });
     }
 
-    private void emegency() {
+    private void emergency() {
 
     }
 }

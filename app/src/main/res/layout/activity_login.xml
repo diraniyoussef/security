@@ -7,7 +7,7 @@
     tools:context=".Login">
 
     <EditText
-        android:id="@+id/full_name"
+        android:id="@+id/full_name_editText"
         android:layout_width="380dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.064" />
 
     <EditText
-        android:id="@+id/phone"
+        android:id="@+id/phone_editText"
         android:layout_width="380dp"
         android:layout_height="64dp"
         android:layout_marginBottom="424dp"
@@ -35,32 +35,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/full_name"
+        app:layout_constraintTop_toBottomOf="@+id/full_name_editText"
         app:layout_constraintVertical_bias="0.18" />
 
     <ProgressBar
-        android:id="@+id/loading"
+        android:id="@+id/loading_progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="183dp"
         android:layout_height="62dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password_editText"
         app:layout_constraintVertical_bias="0.181" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/login_button"
         android:layout_width="218dp"
         android:layout_height="52dp"
         android:text="login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loading" />
+        app:layout_constraintTop_toBottomOf="@+id/loading_progressBar" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/password_editText"
         android:layout_width="379dp"
         android:layout_height="62dp"
         android:ems="10"
@@ -71,6 +71,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone"
+        app:layout_constraintTop_toBottomOf="@+id/phone_editText"
         app:layout_constraintVertical_bias="0.078" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.049" />
 
     <ImageButton
-        android:id="@+id/emergancy"
+        android:id="@+id/emergency_button"
         android:layout_width="165dp"
         android:layout_height="176dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,10 +42,10 @@
         app:srcCompat="@drawable/emergancy" />
 
     <Spinner
-        android:id="@+id/sos"
+        android:id="@+id/sos_case_spinner"
         android:layout_width="361dp"
         android:layout_height="34dp"
-        app:layout_constraintBottom_toTopOf="@+id/emergancy"
+        app:layout_constraintBottom_toTopOf="@+id/emergency_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

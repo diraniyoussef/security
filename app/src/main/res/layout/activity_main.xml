@@ -23,7 +23,7 @@
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/welcome"
+        android:id="@+id/welcome_textView"
         android:layout_width="295dp"
         android:layout_height="57dp"
         android:layout_marginBottom="124dp"
@@ -40,7 +40,7 @@
         tools:visibility="visible" />
 
     <Button
-        android:id="@+id/login1"
+        android:id="@+id/login_button"
         android:layout_width="143dp"
         android:layout_height="61dp"
         android:layout_marginStart="44dp"
@@ -48,14 +48,14 @@
         android:text="login"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/register1"
+        app:layout_constraintEnd_toStartOf="@+id/register_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_textView"
         app:layout_constraintVertical_bias="0.539"
         tools:visibility="visible" />
 
     <Button
-        android:id="@+id/register1"
+        android:id="@+id/register_button"
         android:layout_width="135dp"
         android:layout_height="65dp"
         android:layout_marginStart="53dp"
@@ -64,8 +64,8 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/login1"
-        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        app:layout_constraintStart_toEndOf="@+id/login_button"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_textView"
         app:layout_constraintVertical_bias="0.508"
         tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

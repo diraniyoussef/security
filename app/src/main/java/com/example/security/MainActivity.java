@@ -12,42 +12,41 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     ImageView police;
     TextView welcome;
-    Button login;
-    Button register;
+    Button loginButton;
+    Button registerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         police = findViewById(R.id.police);
-        welcome = findViewById(R.id.welcome);
-        login = findViewById(R.id.login1);
-        register = findViewById(R.id.register1);
-        login.setOnClickListener(new View.OnClickListener() {
+        welcome = findViewById(R.id.welcome_textView);
+        loginButton = findViewById(R.id.login_button);
+        registerButton = findViewById(R.id.register_button);
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                login1();
+                loginPressed();
             }
         });
-        register.setOnClickListener(new View.OnClickListener() {
+        registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                register1();
+                registerPressed();
             }
         });
     }
 
-    public void register1() {
+    public void registerPressed() {
         Intent intent1 = new Intent(MainActivity.this, Register.class);
         startActivity(intent1);
         finish();
     }
 
-    public void login1() {
+    public void loginPressed() {
         Intent intent = new Intent(MainActivity.this, Login.class);
         startActivity(intent);
         finish();
     }
 
 }
-
